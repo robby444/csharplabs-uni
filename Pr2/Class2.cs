@@ -27,7 +27,8 @@ namespace Pr2
             else
             {
                 int perimeter = a + b + c;
-                double area = Math.Sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c));
+                double halfPerimeter = perimeter / 2.0;
+                double area = Math.Sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
                 Console.WriteLine($"Perimeter: {perimeter}");
                 Console.WriteLine($"Area: {area}");
                 GetTriangleType(a, b, c);
